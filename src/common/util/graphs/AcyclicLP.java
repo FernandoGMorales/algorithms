@@ -1,6 +1,6 @@
 package common.util.graphs;
 
-import common.util.dynamicSets.dataStructures.Stack;
+import common.util.ADT.Stack;
 
 public class AcyclicLP {
 	

@@ -3,7 +3,7 @@ package common.util.graphs;
 import java.io.File;
 import java.util.logging.Logger;
 
-import common.util.dynamicSets.dataStructures.DoubleLinkedList;
+import common.util.ADT.DoubleLinkedList;
 
 public class EdgeWeightedDigraph implements Graphical {
 	

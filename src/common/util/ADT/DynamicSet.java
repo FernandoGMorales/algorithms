@@ -1,4 +1,4 @@
-package common.util.dynamicSets.dataStructures;
+package common.util.ADT;
 
 /**
  * Operation defined for a Dynamic Set.

@@ -1,4 +1,4 @@
-package common.util.dynamicSets.dataStructures;
+package common.util.ADT;
 
 import java.util.Iterator;
 

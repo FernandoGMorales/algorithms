@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import common.util.dynamicSets.dataStructures.DoubleLinkedList;
+import common.util.ADT.DoubleLinkedList;
 
 public class GraphBuilder {
 	

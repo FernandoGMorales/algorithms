@@ -1,6 +1,6 @@
 package com.codility.lesson8;
 
-import common.util.dynamicSets.dataStructures.Stack;
+import common.util.ADT.Stack;
 
 public class Dominator {
 	

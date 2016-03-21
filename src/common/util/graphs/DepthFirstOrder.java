@@ -1,7 +1,7 @@
 package common.util.graphs;
 
-import common.util.dynamicSets.dataStructures.Queue;
-import common.util.dynamicSets.dataStructures.Stack;
+import common.util.ADT.Queue;
+import common.util.ADT.Stack;
 
 public class DepthFirstOrder {
 	
