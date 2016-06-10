@@ -4,31 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class AbstractTree<E> implements Tree<E> {
-
-	@Override
-	public Position<E> root() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Position<E> parent(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Iterable<Position<E>> children(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int numChildren(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+public abstract class AbstractTree<E> implements Tree<E> {	
 
 	@Override
 	public boolean isInternal(Position<E> p) throws IllegalArgumentException {
@@ -43,13 +19,7 @@ public class AbstractTree<E> implements Tree<E> {
 	@Override
 	public boolean isRoot(Position<E> p) throws IllegalArgumentException {
 		return p == root( );
-	}
-
-	@Override
-	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	}	
 
 	@Override
 	public boolean isEmpty() {

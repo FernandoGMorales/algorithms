@@ -3,19 +3,7 @@ package common.util.ADT;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AbstractBinaryTree<E> extends AbstractTree<E> implements BinaryTree<E> {
-
-	@Override
-	public Position<E> left(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Position<E> right(Position<E> p) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public abstract class AbstractBinaryTree<E> extends AbstractTree<E> implements BinaryTree<E> {	
 
 	@Override
 	/**

@@ -15,7 +15,7 @@ public class NthPrime {
 	 */
 	public static void main(String[] args) {
 		Date start = new Date();
-		boolean[] sieve = SieveOfEratosthenes.sieve(104_744);
+		boolean[] sieve = SieveOfEratosthenes.sieveAsBooleanArray(104_744);
 		int count = 0;
 		for(int i=0; i<sieve.length; i++) {
 			if(sieve[i]==false) {

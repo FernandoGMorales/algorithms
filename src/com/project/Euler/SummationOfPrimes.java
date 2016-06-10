@@ -12,7 +12,7 @@ public class SummationOfPrimes {
 	 * @param args
 	 */
 	public static void main(String[] args) {		
-		boolean[] primes = SieveOfEratosthenes.sieve(2_000_000);
+		boolean[] primes = SieveOfEratosthenes.sieveAsBooleanArray(2_000_000);
 		long sum = 0;
 		for(int i=2; i<primes.length; i++) {
 			if(!primes[i]) {

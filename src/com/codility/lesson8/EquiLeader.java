@@ -4,7 +4,8 @@ public class EquiLeader {
 	
 	/**
 	 * 
-	 * REVIEW!!!!
+	 * https://codility.com/demo/results/trainingMKEYVJ-NA4/ 100%
+	 * 
 	 * Problem facts:
 	 * 1) A non-empty zero-indexed array A consisting of N integers is given
 	 * 2) The leader of this array is the value that occurs in more than half of the elements of A.
@@ -18,42 +19,42 @@ public class EquiLeader {
 	 * 
 	 * Solution:
 	 * 
+	 * 
 	 * @param A
 	 * @return the number of equi leaders.
 	 */
 	public static int solution(int[] A) {
 		int equileaders = 0;
 		if(A.length==1) return equileaders;
-		int leaderIx = Dominator.solution(A);
+		int leaderIx = Dominator.solution(A); // find the leader
 		if(leaderIx==-1) return equileaders;
 		int N = A.length;		
 		int leader = A[leaderIx];
 		
-		int leaders = 0;
+		int leadersCount = 0;
 		for(int i : A) {
-			if(i==leader) leaders++;
+			if(i==leader) {
+				leadersCount++;
+			}
 		}
 		
-		int lastIndex = -1;
-		int count = 0;
-		int j=0;
-		while(j<N) {
-			if(A[j]==leader) {
-				count++;
+		int count = 0;		
+		for(int i=0; i<N; i++) {
+			if(leader==A[i]) {
+				count++; // count leaders in current sequence A[0],...,A[i]
 			}
-			if(count>(j+1)/2 && j>lastIndex) {
-				equileaders += (leaders-count>(N-(j+1))/2) ? 1 : 0;
-				lastIndex=j;
-				count=0;
-				j=0;				
+			if(count>(i+1)/2) { // verify if the leader is the leader of current sequence: A[0],...,A[i] 
+				if(leadersCount-count>(N-(i+1))/2) { // verify if the remaining leaders apply as leader of the
+					equileaders++;				   // remaining sequence: A[i+1],...,A[N-1]
+				}				 
 			}
-			j++;
-		}		
+		}
+						
 		return equileaders;
 	}
 	
 	public static void main(String[] args) {
-		int equileaders = solution(new int[]{4, 4});
+		int equileaders = solution(new int[]{4});
 		System.out.print(equileaders);
 	}
 
